@@ -22,7 +22,7 @@ const HOVER_ANIMATION = true; // true, false
 const SYSTEM_TRAY_HOT_CORNER = right; // left, right, middle
 
 const TL_COMMAND = false;
-const TR_COMMAND = false; // gnome-terminal.desktop
+const TR_COMMAND = false; // 'gnome-terminal.desktop'
 const BL_COMMAND = false; // 'firefox.desktop' 
 const BR_COMMAND = false; // 'gnome-system-monitor.desktop'
 
