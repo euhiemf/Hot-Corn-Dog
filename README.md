@@ -47,7 +47,7 @@ Set the `HOVER_ANIMATION` to `true` if you want a blue halfcircle to come upp fo
 
 If you want to change the position of the system/message tray you change `SYSTEM_TRAY_HOT_CORNER`, you can choose between having it in the middle, left, or right.
 
-The `TL_COMMAND`, `TR_COMMAND`, `BL_COMMAND`, `BR_COMMAND` are custom commands that will be ran instead of toggling the gnome shell overview. If you want to launch an installed application, write the name of it followed by `.desktop`
+The `TL_COMMAND`, `TR_COMMAND`, `BL_COMMAND`, `BR_COMMAND` are custom commands that will be executed instead of toggling the gnome shell overview. If you want to launch an installed application, write the name of it followed by `.desktop` in "" (quotes) or ''
 
 When you are done with editing you need to reload the gnome shell by entering `Alt + F2` and then enter `r`
 
