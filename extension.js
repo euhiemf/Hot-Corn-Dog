@@ -14,10 +14,10 @@ const MessageTray = imports.ui.messageTray;
 
 // The commented stuff in the end of each line is examples of available values.
 
-const CORNER_TL = true; // true, false
-const CORNER_TR = true; // true, false
-const CORNER_BL = false; // true, false
-const CORNER_BR = true; // true, false
+const CORNER_TL = false; // true, false
+const CORNER_TR = false; // true, false
+const CORNER_BL = true; // true, false
+const CORNER_BR = false; // true, false
 
 const HOVER_ANIMATION = true; // true, false
 
@@ -26,7 +26,7 @@ const SYSTEM_TRAY_HOT_CORNER = right; // left, right, middle
 
 // Remeber to change the CORNER_TL, CORNER_TR, CORNER_BL or CORNER_BR to true after you have made a change here.
 const TL_COMMAND = false; // 'nautilus.desktop'
-const TR_COMMAND = false; // 'gnome-terminal.desktop'
+const TR_COMMAND = false; // "gnome-terminal.desktop"
 const BL_COMMAND = false; // 'firefox.desktop' 
 const BR_COMMAND = false; // 'gnome-system-monitor.desktop'
 
@@ -44,10 +44,14 @@ const BR_COMMAND = false; // 'gnome-system-monitor.desktop'
 let corner = [];
 
 
+function init() { }
+
+
+
 function fourLoop ( func ) {
 	for (let i = 0, c = 4; i < c; i += 1) {
 		func(i);
-	};
+	}
 }
 
 
@@ -64,23 +68,23 @@ function toggleOverview( node ) {
 					opacity: 0,
 					time: 0.5,
 					transition: 'easeOutQuad'
-				});
+				} );
 			}
-		});
+		} );
 	}
 
 	if ( node.custom_command === false ) {
 		Main.overview.toggle();
 	} else {
-		let app = Shell.AppSystem.get_default().lookup_app(node.custom_command);
-		app.open_new_window(-1);
+		let app = Shell.AppSystem.get_default().lookup_app( node.custom_command );
+		app.open_new_window( -1 );
 	}
 	
 }
 
-function init() {
-
+function initializeCorners() {
 	fourLoop ( function ( i ) {
+
 		corner[i] = {};
 		
 		corner[i].ui = new St.Bin( {
@@ -118,25 +122,30 @@ function init() {
 	if ( CORNER_TR )
     		corner[1].ui.connect( 'enter-event', function () { toggleOverview( corner[1] ) });
 
-	if ( CORNER_BR )
+	if ( CORNER_BL )
     		corner[2].ui.connect( 'enter-event', function () { toggleOverview( corner[2] ) });
 
-	if ( CORNER_BL )
+	if ( CORNER_BR )
     		corner[3].ui.connect( 'enter-event', function () { toggleOverview( corner[3] ) });
 
-	
+
 }
+
 
 function enable() {
 
-	Main.messageTray._hideTray = Lang.bind(Main.messageTray, function() {
-		this._tween(this.actor, '_trayState', MessageTray.State.HIDDEN, { y: -1 });
-	});
+	Main.messageTray._hideTray = Lang.bind( Main.messageTray, function () {
+		this._tween( this.actor, '_trayState', MessageTray.State.HIDDEN, { y: -1 } );
+	} );
 
 	Main.panel._activitiesButton._hotCorner._corner.hide();
 
 	Main.messageTray._summaryBin.x_align = SYSTEM_TRAY_HOT_CORNER;
 	Main.messageTray._hideTray();
+
+
+
+	initializeCorners();
 
 }
 
@@ -152,3 +161,4 @@ function disable() {
 
   	Main.messageTray._summaryBin.x_align = right;
 }
+
