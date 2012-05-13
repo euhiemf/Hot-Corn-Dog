@@ -6,7 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="chrome=1" />
     <meta name="description" content="Hot-corn-dog : This is an gnome 3.4.1 extension where you can pick your own &quot;hot corners&quot; for toggling the overview, or for running custom applications. You can also change the &quot;Hot corner&quot; for the message tray." />
 
+		<link href='http://fonts.googleapis.com/css?family=Inconsolata|Open+Sans' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
 
     <title>Hot-corn-dog</title>
   </head>
@@ -19,7 +21,7 @@
           <a id="forkme_banner" href="https://github.com/senatorn/Hot-Corn-Dog">View on GitHub</a>
 
           <h1 id="project_title">Hot-corn-dog</h1>
-          <h2 id="project_tagline">This is an gnome 3.4.1 extension where you can pick your own &quot;hot corners&quot; for toggling the overview, or for running custom applications. You can also change the &quot;Hot corner&quot; for the message tray.</h2>
+          <h2 id="project_tagline">This is a gnome 3.4.1 extension where you can pick your own &quot;hot corners&quot; for toggling the overview, or for running custom applications. You can also change the &quot;Hot corner&quot; for the message tray.</h2>
 
             <section id="downloads">
               <a class="zip_download_link" href="https://github.com/senatorn/Hot-Corn-Dog/zipball/master">Download this project as a .zip file</a>
@@ -58,19 +60,19 @@ open <code>extension.js</code>.</p>
 
 <p>You can edit the following values:</p>
 
-<pre><code>const CORNER_TL = false;
-const CORNER_TR = false;
-const CORNER_BL = false;
-const CORNER_BR = true;
+<pre class='highlight'><code><span class='k'>const</span> <span class='s'>CORNER_TL</span> <span class='o'>=</span> <span class='nl'>false</span><span class='o'>;</span>
+<span class='k'>const</span> <span class='s'>CORNER_TR</span> <span class='o'>=</span> <span class='nl'>false</span><span class='o'>;</span>
+<span class='k'>const</span> <span class='s'>CORNER_BL</span> <span class='o'>=</span> <span class='nl'>false</span><span class='o'>;</span>
+<span class='k'>const</span> <span class='s'>CORNER_BR</span> <span class='o'>=</span> <span class='nl'>true</span><span class='o'>;</span>
 
-const HOVER_ANIMATION = true;
+<span class='k'>const</span> <span class='s'>HOVER_ANIMATION</span> <span class='o'>=</span> <span class='nl'>true</span><span class='o'>;</span>
 
-const SYSTEM_TRAY_HOT_CORNER = right;
-
-const TL_COMMAND = false;
-const TR_COMMAND = false;
-const BL_COMMAND = false;
-const BR_COMMAND = false;
+<span class='k'>const</span> <span class='s'>SYSTEM_TRAY_HOT_CORNER</span> <span class='o'>=</span> <span class='nl'>right</span><span class='o'>;</span>
+                              
+<span class='k'>const</span> <span class='s'>TL_COMMAND</span> <span class='o'>=</span> <span class='nl'>false</span><span class='o'>;</span>
+<span class='k'>const</span> <span class='s'>TR_COMMAND</span> <span class='o'>=</span> <span class='nl'>false</span><span class='o'>;</span>
+<span class='k'>const</span> <span class='s'>BL_COMMAND</span> <span class='o'>=</span> <span class='nl'>false</span><span class='o'>;</span>
+<span class='k'>const</span> <span class='s'>BR_COMMAND</span> <span class='o'>=</span> <span class='nl'>false</span><span class='o'>;</span>
 </code></pre>
 
 <p>The first four values <code>CORNER_TL</code>, <code>CORNER_TR</code>, <code>CORNER_BL</code>, <code>CORNER_BR</code> are the four courners, if you want to disable one corner, set it to <code>false</code> otherwise set it to <code>true</code>.</p>
@@ -81,7 +83,7 @@ const BR_COMMAND = false;
 
 <p>The <code>TL_COMMAND</code>, <code>TR_COMMAND</code>, <code>BL_COMMAND</code>, <code>BR_COMMAND</code> are custom commands that will be executed instead of toggling the gnome shell overview. If you want to launch an installed application, write the name of it followed by <code>.desktop</code> in "" (quotes) or ''</p>
 
-<p>When you are done with editing you need to reload the gnome shell by entering <code>Alt + F2</code> and then enter <code>r</code></p>
+<p>When you are done with editing you need to reload the gnome shell by pressing <code>Alt + F2</code> and then enter <code>r</code></p>
 
 <p>There are some comments in the extension.js file that hopefully will help you with this.</p>
       </section>

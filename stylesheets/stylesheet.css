@@ -60,7 +60,7 @@ body {
   color:#373737;
   background: #212121;
   font-size: 16px;
-  font-family: 'Myriad Pro', Calibri, Helvetica, Arial, sans-serif;
+  font-family: 'Open Sans', 'Lucida Grande', 'Calibri', Helvetica, Arial, 'Myriad Pro', Calibri, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
 }
@@ -69,7 +69,7 @@ h1, h2, h3, h4, h5, h6 {
   margin: 10px 0;
   font-weight: 700;
   color:#222222;
-  font-family: 'Lucida Grande', 'Calibri', Helvetica, Arial, sans-serif;
+  font-family: 'Open Sans', 'Lucida Grande', 'Calibri', Helvetica, Arial, sans-serif;
   letter-spacing: -1px;
 }
 
@@ -162,8 +162,7 @@ pre, code {
   width: 100%;
   color: #222;
   background-color: #fff;
-
-  font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
+  font-family: 'Inconsolata', Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace, sans-serif;
   font-size: 14px;
 
   border-radius: 2px;
@@ -182,9 +181,10 @@ pre {
 }
 
 code {
-  padding: 3px;
-  margin: 0 3px;
+  padding: 0 3px;
+  margin: 0;
   box-shadow: 0 0 10px rgba(0,0,0,.1);
+	border: 1px solid rgba(150,150,150,0.5);
 }
 
 pre code {
