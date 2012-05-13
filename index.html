@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Hot-corn-dog : This is an gnome 3.4.1 extension where you can pick your own &quot;hot corners&quot; for toggling the overview, or for running custom applications. You can also change the &quot;Hot corner&quot; for the message tray." />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Hot-corn-dog</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/senatorn/Hot-Corn-Dog">View on GitHub</a>
+
+          <h1 id="project_title">Hot-corn-dog</h1>
+          <h2 id="project_tagline">This is an gnome 3.4.1 extension where you can pick your own &quot;hot corners&quot; for toggling the overview, or for running custom applications. You can also change the &quot;Hot corner&quot; for the message tray.</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/senatorn/Hot-Corn-Dog/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/senatorn/Hot-Corn-Dog/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>Hot-Corn-Dog</h1>
+
+<p>This is an gnome 3.4.1 extension where you can pick your own "hot corners" for toggling the overview, or for running custom applications. You can also change the "Hot corner" for the message tray.</p>
+
+<h2>INSTALLATION</h2>
+
+<p>Download the files:</p>
+
+<pre><code>git clone https://senatorn@github.com/senatorn/Hot-Corn-Dog.git
+</code></pre>
+
+<p>If you downloaded the zip you need to:</p>
+
+<pre><code>unzip Hot-Corn-Dog
+</code></pre>
+
+<p>then move the files to either <code>~/.local/share/gnome-shell/extensions/Hot-Corn-Dog.senatorn@github.com</code> or to if you want to install for all users <code>/usr/share/gnome-shell/extensions/Hot-Corn-Dog.senatorn@github.com</code></p>
+
+<p>you will maybe need to enable this extension in gnome-tweak-tool.</p>
+
+<h2>CUSTOMIZATION</h2>
+
+<p>Go to the folder where you installed the files.
+open <code>extension.js</code>.</p>
+
+<p>You can edit the following values:</p>
+
+<pre><code>const CORNER_TL = false;
+const CORNER_TR = false;
+const CORNER_BL = false;
+const CORNER_BR = true;
+
+const HOVER_ANIMATION = true;
+
+const SYSTEM_TRAY_HOT_CORNER = right;
+
+const TL_COMMAND = false;
+const TR_COMMAND = false;
+const BL_COMMAND = false;
+const BR_COMMAND = false;
+</code></pre>
+
+<p>The first four values <code>CORNER_TL</code>, <code>CORNER_TR</code>, <code>CORNER_BL</code>, <code>CORNER_BR</code> are the four courners, if you want to disable one corner, set it to <code>false</code> otherwise set it to <code>true</code>.</p>
+
+<p>Set the <code>HOVER_ANIMATION</code> to <code>true</code> if you want a blue halfcircle to come upp for a second when you hover one of the hot corners, otherwise, set it to <code>false</code>.</p>
+
+<p>If you want to change the position of the system/message tray you change <code>SYSTEM_TRAY_HOT_CORNER</code>, you can choose between having it in the middle, left, or right.</p>
+
+<p>The <code>TL_COMMAND</code>, <code>TR_COMMAND</code>, <code>BL_COMMAND</code>, <code>BR_COMMAND</code> are custom commands that will be executed instead of toggling the gnome shell overview. If you want to launch an installed application, write the name of it followed by <code>.desktop</code> in "" (quotes) or ''</p>
+
+<p>When you are done with editing you need to reload the gnome shell by entering <code>Alt + F2</code> and then enter <code>r</code></p>
+
+<p>There are some comments in the extension.js file that hopefully will help you with this.</p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Hot-corn-dog maintained by <a href="https://github.com/senatorn">senatorn</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
