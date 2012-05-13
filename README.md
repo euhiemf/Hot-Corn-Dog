@@ -49,6 +49,6 @@ If you want to change the position of the system/message tray you change `SYSTEM
 
 The `TL_COMMAND`, `TR_COMMAND`, `BL_COMMAND`, `BR_COMMAND` are custom commands that will be executed instead of toggling the gnome shell overview. If you want to launch an installed application, write the name of it followed by `.desktop` in "" (quotes) or ''
 
-When you are done with editing you need to reload the gnome shell by entering `Alt + F2` and then enter `r`
+When you are done with editing you need to reload the gnome shell by pressing `Alt + F2` and then enter `r`
 
 There are some comments in the extension.js file that hopefully will help you with this.
