@@ -14,7 +14,7 @@ If you downloaded the zip you need to:
 
     unzip Hot-Corn-Dog
 
-then move all the files in the directory to either `~/.local/share/gnome-shell/extensions/Hot-Corn-Dog.senatorn@github.com` or to if you want to install for all users `/usr/share/gnome-shell/extensions/Hot-Corn-Dog.senatorn@github.com`
+then move all the files __in the directory__ to either `~/.local/share/gnome-shell/extensions/Hot-Corn-Dog.senatorn@github.com` or to if you want to install for all users `/usr/share/gnome-shell/extensions/Hot-Corn-Dog.senatorn@github.com`
 
 So if you want to install it locally, which is the way I recommend, enter the following in a terminal:
 
