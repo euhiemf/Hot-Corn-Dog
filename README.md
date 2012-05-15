@@ -1,7 +1,7 @@
 Hot-Corn-Dog
 ============
 
-This is an GNOME Shell extension where you can pick your own "hot corners" for toggling the overview, or for running custom applications. You can also change the "hot corner" for the message tray.
+This is a GNOME Shell extension where you can pick your own "hot corners" for toggling the overview, or for running custom applications. You can also change the "hot corner" for the message tray.
 
 INSTALLATION
 ------------
@@ -39,12 +39,12 @@ To uninstall you go to the directory that you installed the extension in, and th
 
     rm -rf ~/.local/share/gnome-shell/extensions/Hot-Corn-Dog.senatorn@github.com/
 
-To just disable the extension go the *gnome-tweak-tool* and disable it.
+To just disable the extension go to the *gnome-tweak-tool* and disable it.
 
-INSTALLATION
-------------
+CUSTOMIZATION
+-------------
 
-Go to the folder where you installed the files. open *extension.js*.
+Go to the folder where you installed the files and open *extension.js*.
 
 You can edit the following values:
 
@@ -62,7 +62,7 @@ You can edit the following values:
     const BL_COMMAND = false;
     const BR_COMMAND = false;
 
-The first four values `CORNER_TL`, `CORNER_TR`, `CORNER_BL`, `CORNER_BR` are the four courners. If you want to disable a corner, set the value to `false` otherwise set it to `true`.
+The first four values `CORNER_TL`, `CORNER_TR`, `CORNER_BL`, `CORNER_BR` are the four corners. If you want to disable a corner, set the value to `false` otherwise set it to `true`.
 
 Set the `HOVER_ANIMATION` to `true` if you want a blue half circle to come upp for a second when you hover one of the hot corners, otherwise, set it to `false`.
 
