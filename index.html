@@ -4,7 +4,7 @@
   <head>
     <meta charset='utf-8' />
     <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="Hot-corn-dog : This is an GNOME Shell extension where you can pick your own &quot;hot corners&quot; for toggling the overview, or for running custom applications. You can also change the &quot;Hot corner&quot; for the message tray." />
+    <meta name="description" content="Hot-corn-dog : This is an GNOME Shell extension where you can pick your own &quot;hot corners&quot; for toggling the overview, or for running custom applications. You can also change the &quot;hot corner&quot; for the message tray." />
 
 		<link href='http://fonts.googleapis.com/css?family=Inconsolata|Open+Sans' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
@@ -21,7 +21,7 @@
           <a id="forkme_banner" href="https://github.com/senatorn/Hot-Corn-Dog">View on GitHub</a>
 
           <h1 id="project_title">Hot-corn-dog</h1>
-          <h2 id="project_tagline">This is a GNOME Shell extension where you can pick your own &quot;hot corners&quot; for toggling the overview, or for running custom applications. You can also change the &quot;Hot corner&quot; for the message tray.</h2>
+          <h2 id="project_tagline">This is an GNOME Shell extension where you can pick your own &quot;hot corners&quot; for toggling the overview, or for running custom applications. You can also change the &quot;hot corner&quot; for the message tray.</h2>
 
             <section id="downloads">
               <a class="zip_download_link" href="https://github.com/senatorn/Hot-Corn-Dog/zipball/master">Download this project as a .zip file</a>
@@ -35,7 +35,7 @@
       <section id="main_content" class="inner">
         <h1>Hot-Corn-Dog</h1>
 
-<p>This is an GNOME Shell extension where you can pick your own "hot corners" for toggling the overview, or for running custom applications. You can also change the "Hot corner" for the message tray.</p>
+<p>This is an GNOME Shell extension where you can pick your own &quot;hot corners&quot; for toggling the overview, or for running custom applications. You can also change the &quot;hot corner&quot; for the message tray.</p>
 
 <h2>INSTALLATION</h2>
 
@@ -63,6 +63,8 @@ rm -rf Hot-Corn-Dog
 <p>Now open the run dialog by pressing <code>Alt-F2</code> and write <code>r</code>, after that press enter.</p>
 
 <p>By default all corners except the bottom-left are disabled.</p>
+
+<p>After you have install the extension please read the <a href='#compatibility'>compatibility</a> information.</p>
 
 <h2>UNINSTALLATION</h2>
 <p>To uninstall you go to the directory that you installed the extension in, and then remove it. If you for example want to uninstall the extension after a local installaion, enter the following in a terminal:</p>
@@ -103,12 +105,12 @@ open <em>extension.js</em>.</p>
 
 <p>There are some comments in the <em>extension.js</em> file that hopefully will help you with the customization.</p>
 
-<h2>COMPATIBILITY</h2>
+<h2 id='compatibility'>COMPATIBILITY</h2>
 <p>The extension is by default only compatible with Gnome Shell version 3.4.1, because that is the only version it has been tested on.</p>
 <p>To try this extension on your Gnome Shell you need to add your <code>shell-version</code> in the <em>metadata.json</em> file.</p>
 <p>To see which GNOME version you are using, run this is a terminal:</p>
 <pre class='highlight'><code>gnome-shell --version</code></pre>
-When you know your version, open the <em>metadata.json</em> file:
+When you know your version, open the <em>metadata.json</em> file by entering this in a terminal:
 <pre class='highlight'><code>gedit ~/.local/share/gnome-shell/extensions/Hot-Corn-Dog.senatorn@github.com/metadata.json</code></pre>
 <p>The file should look something like this:</p>
 <pre class='highlight'><code>{
@@ -118,7 +120,7 @@ When you know your version, open the <em>metadata.json</em> file:
 "description": "Add Hot-Corners for toggling the overview... bla bla bla"
 }
 </code></pre>
-<p>Now, if your shell version is, for example, <strong>3.5.7</strong>, :</p>
+<p>Now, if your shell version is, for example, <strong>3.5.7</strong>, then add it to the <code>shell-version</code> like this:</p>
 <pre class='highlight'><code>"shell-version": ["3.4.1", "<strong>3.5.7</strong>"],
 </code></pre>
 <p>Now save the file and reload the shell (<code>Alt + F2</code> and enter <code>r</code>).</p>
