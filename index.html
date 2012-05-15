@@ -4,7 +4,7 @@
   <head>
     <meta charset='utf-8' />
     <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="Hot-corn-dog : This is an gnome 3.4.1 extension where you can pick your own &quot;hot corners&quot; for toggling the overview, or for running custom applications. You can also change the &quot;Hot corner&quot; for the message tray." />
+    <meta name="description" content="Hot-corn-dog : This is an GNOME Shell extension where you can pick your own &quot;hot corners&quot; for toggling the overview, or for running custom applications. You can also change the &quot;Hot corner&quot; for the message tray." />
 
 		<link href='http://fonts.googleapis.com/css?family=Inconsolata|Open+Sans' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
@@ -21,7 +21,7 @@
           <a id="forkme_banner" href="https://github.com/senatorn/Hot-Corn-Dog">View on GitHub</a>
 
           <h1 id="project_title">Hot-corn-dog</h1>
-          <h2 id="project_tagline">This is a gnome 3.4.1 extension where you can pick your own &quot;hot corners&quot; for toggling the overview, or for running custom applications. You can also change the &quot;Hot corner&quot; for the message tray.</h2>
+          <h2 id="project_tagline">This is a GNOME Shell extension where you can pick your own &quot;hot corners&quot; for toggling the overview, or for running custom applications. You can also change the &quot;Hot corner&quot; for the message tray.</h2>
 
             <section id="downloads">
               <a class="zip_download_link" href="https://github.com/senatorn/Hot-Corn-Dog/zipball/master">Download this project as a .zip file</a>
@@ -35,7 +35,7 @@
       <section id="main_content" class="inner">
         <h1>Hot-Corn-Dog</h1>
 
-<p>This is an gnome 3.4.1 extension where you can pick your own "hot corners" for toggling the overview, or for running custom applications. You can also change the "Hot corner" for the message tray.</p>
+<p>This is an GNOME Shell extension where you can pick your own "hot corners" for toggling the overview, or for running custom applications. You can also change the "Hot corner" for the message tray.</p>
 
 <h2>INSTALLATION</h2>
 
@@ -49,14 +49,30 @@
 <pre><code>unzip Hot-Corn-Dog
 </code></pre>
 
-<p>then move the files to either <code>~/.local/share/gnome-shell/extensions/Hot-Corn-Dog.senatorn@github.com</code> or to if you want to install for all users <code>/usr/share/gnome-shell/extensions/Hot-Corn-Dog.senatorn@github.com</code></p>
+<p>then move all the files <b>in the directory</b> to either <code>~/.local/share/gnome-shell/extensions/Hot-Corn-Dog.senatorn@github.com</code> or to if you want to install for all users <code>/usr/share/gnome-shell/extensions/Hot-Corn-Dog.senatorn@github.com</code></p>
 
-<p>you will maybe need to enable this extension in gnome-tweak-tool.</p>
+<p>So if you want to install it locally, which is the way I recommend, enter the following in a terminal:
+<pre class='highlight'><code>cd ~
+git clone https://senatorn@github.com/senatorn/Hot-Corn-Dog.git
+cd Hot-Corn-Dog
+mkdir ~/.local/share/gnome-shell/extensions/Hot-Corn-Dog.senatorn@github.com/
+cp * ~/.local/share/gnome-shell/extensions/Hot-Corn-Dog.senatorn@github.com/
+cd ../
+rm -rf Hot-Corn-Dog
+</code></pre>
+<p>Now open the run dialog by pressing <code>Alt-F2</code> and write <code>r</code>, after that press enter.</p>
 
+<p>By default all corners except the bottom-left are disabled.</p>
+
+<h2>UNINSTALLATION</h2>
+<p>To uninstall you go to the directory that you installed the extension in, and then remove it. If you for example want to uninstall the extension after a local installaion, enter the following in a terminal:</p>
+<pre class='highlight'><code>rm -rf ~/.local/share/gnome-shell/extensions/Hot-Corn-Dog.senatorn@github.com/
+</code></pre>
+<p>To just disable the extension go the <em>gnome-tweak-tool</em> and disable it.</p> 
 <h2>CUSTOMIZATION</h2>
 
 <p>Go to the folder where you installed the files.
-open <code>extension.js</code>.</p>
+open <em>extension.js</em>.</p>
 
 <p>You can edit the following values:</p>
 
@@ -75,17 +91,41 @@ open <code>extension.js</code>.</p>
 <span class='k'>const</span> <span class='s'>BR_COMMAND</span> <span class='o'>=</span> <span class='nl'>false</span><span class='o'>;</span>
 </code></pre>
 
-<p>The first four values <code>CORNER_TL</code>, <code>CORNER_TR</code>, <code>CORNER_BL</code>, <code>CORNER_BR</code> are the four courners, if you want to disable one corner, set it to <code>false</code> otherwise set it to <code>true</code>.</p>
+<p>The first four values <code>CORNER_TL</code>, <code>CORNER_TR</code>, <code>CORNER_BL</code>, <code>CORNER_BR</code> are the four courners. If you want to disable a corner, set the value to <code>false</code> otherwise set it to <code>true</code>.</p>
 
-<p>Set the <code>HOVER_ANIMATION</code> to <code>true</code> if you want a blue halfcircle to come upp for a second when you hover one of the hot corners, otherwise, set it to <code>false</code>.</p>
+<p>Set the <code>HOVER_ANIMATION</code> to <code>true</code> if you want a blue half circle to come upp for a second when you hover one of the hot corners, otherwise, set it to <code>false</code>.</p>
 
 <p>If you want to change the position of the system/message tray you change <code>SYSTEM_TRAY_HOT_CORNER</code>, you can choose between having it in the middle, left, or right.</p>
 
-<p>The <code>TL_COMMAND</code>, <code>TR_COMMAND</code>, <code>BL_COMMAND</code>, <code>BR_COMMAND</code> are custom commands that will be executed instead of toggling the gnome shell overview. If you want to launch an installed application, write the name of it followed by <code>.desktop</code> in "" (quotes) or ''</p>
+<p>The <code>TL_COMMAND</code>, <code>TR_COMMAND</code>, <code>BL_COMMAND</code>, <code>BR_COMMAND</code> values are custom applications that will be executed instead of toggling the <em>Gnome shell overview</em>. If you want to launch an installed application, write the name of it followed by <code>.desktop</code> in &quot;&quot; (two double quotation marks) or &#39;&#39; (two apostrophes)</p>
 
-<p>When you are done with editing you need to reload the gnome shell by pressing <code>Alt + F2</code> and then enter <code>r</code></p>
+<p>When you are done with editing you need to reload the <em>Gnome shell</em> by pressing <code>Alt + F2</code> and then enter <code>r</code></p>
 
-<p>There are some comments in the extension.js file that hopefully will help you with this.</p>
+<p>There are some comments in the <em>extension.js</em> file that hopefully will help you with the customization.</p>
+
+<h2>COMPATIBILITY</h2>
+<p>The extension is by default only compatible with Gnome Shell version 3.4.1, because that is the only version it has been tested on.</p>
+<p>To try this extension on your Gnome Shell you need to add your <code>shell-version</code> in the <em>metadata.json</em> file.</p>
+<p>To see which GNOME version you are using, run this is a terminal:</p>
+<pre class='highlight'><code>gnome-shell --version</code></pre>
+When you know your version, open the <em>metadata.json</em> file:
+<pre class='highlight'><code>gedit ~/.local/share/gnome-shell/extensions/Hot-Corn-Dog.senatorn@github.com/metadata.json</code></pre>
+<p>The file should look something like this:</p>
+<pre class='highlight'><code>{
+"shell-version": ["3.4.1"],
+"uuid": "Hot-Corn-Dog.senatorn@github.com",
+"name": "Hot-Corn-Dog",
+"description": "Add Hot-Corners for toggling the overview... bla bla bla"
+}
+</code></pre>
+<p>Now, if your shell version is, for example, <strong>3.5.7</strong>, :</p>
+<pre class='highlight'><code>"shell-version": ["3.4.1", "<strong>3.5.7</strong>"],
+</code></pre>
+<p>Now save the file and reload the shell (<code>Alt + F2</code> and enter <code>r</code>).</p>
+<p>If the extension is working fine with your shell version please go to the <a href='https://github.com/senatorn/Hot-Corn-Dog/issues' target='_blank'> issues page</a> on github and write which <em>GNOME Shell</em> version you are using so that I can add it to the application by default.</p>
+<p>If the extension isn't working, please do the same as above (but write that it's not compatible with your version) and I will try to fix the problem.</p>
+
+
       </section>
     </div>
 
