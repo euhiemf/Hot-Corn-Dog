@@ -159,6 +159,8 @@ function disable() {
 	
 	Main.panel._activitiesButton._hotCorner._corner.show();
 
-  	Main.messageTray._summaryBin.x_align = right;
+	Main.messageTray._summaryBin.x_align = right;
+
+	delete Main.messageTray._hideTray;
 }
 
