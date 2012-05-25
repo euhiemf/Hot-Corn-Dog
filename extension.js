@@ -7,6 +7,7 @@ const Main = imports.ui.main;
 const Shell = imports.gi.Shell;
 const Tweener = imports.ui.tweener;
 const MessageTray = imports.ui.messageTray;
+const temp_hideTray;
 
 
 
@@ -134,6 +135,8 @@ function initializeCorners() {
 
 function enable() {
 
+	temp_hideTray = Main.messageTray._hideTray;
+
 	Main.messageTray._hideTray = Lang.bind( Main.messageTray, function () {
 		this._tween( this.actor, '_trayState', MessageTray.State.HIDDEN, { y: -1 } );
 	} );
@@ -144,12 +147,13 @@ function enable() {
 	Main.messageTray._hideTray();
 
 
-
 	initializeCorners();
 
 }
 
 function disable() {
+
+	Main.messageTray._hideTray = temp_hideTray;
 
 	fourLoop ( function ( i ) {
 		Main.uiGroup.remove_actor( corner[i].ui );
@@ -161,6 +165,5 @@ function disable() {
 
 	Main.messageTray._summaryBin.x_align = right;
 
-	delete Main.messageTray._hideTray;
 }
 
