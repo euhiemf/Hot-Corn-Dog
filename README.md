@@ -22,6 +22,22 @@ SETTINGS
 
 Added a pref.js, where settings will be added. Hopefully, you will be able to select applictaions/commands, from GUI to be launched when hovering corners.
 
+This can be seens by pressing the settings icon, next to the enable/disable in gnome-tweak tool.
+
+INSTRUCTIONS
+------------
+
+To disable the extension enter this in a terminal, or use the gnome-tweak-tool
+
+    gnome-shell-extension-tool -d "36Hot-Corn-Dog.senatorn@github.com"
+
+to enable, change the `-d` to `-e`.
+
+To install enter
+
+    git clone -b testing https://github.com/senatorn/Hot-Corn-Dog.git ~/.local/share/gnome-shell/extensions/36Hot-Corn-Dog.senatorn@github.com
+
+After installing, restart the gnome shell and enable the extension.
 MORE...
 ------------
 
