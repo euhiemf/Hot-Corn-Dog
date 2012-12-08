@@ -5,3 +5,7 @@
 	border-radius: 200px;
 	cursor: pointer;
 }
+.container {
+	width: 100%;
+	background-color: blue;
+}

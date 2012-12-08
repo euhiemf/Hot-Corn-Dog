@@ -14,6 +14,11 @@ was triggered wherever, and whenever you hovered over the actor. This isn't the 
 
 This test demonstrates this, so you can only see an action when hovering the blue ball in overview mode, otherwise it's "dead".
 
+SETTINGS
+------------
+
+Added a pref.js, where settings will be added. Hopefully, you will be able to select applictaions/commands, from GUI to be launched when hovering corners
+
 MORE...
 ------------
 

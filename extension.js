@@ -2,6 +2,7 @@
 const St = imports.gi.St;
 const Main = imports.ui.main;
 const Tweener = imports.ui.tweener;
+const Gtk = imports.gi.Gtk;
 
 
 
@@ -23,6 +24,9 @@ function enable() {
       x: x,
       y: y
     });
+
+    let dialog = new Gtk.Dialog({ title: "", modal: false});
+    dialog.show_all();
 
 
     corner.connect('enter-event', function () {
