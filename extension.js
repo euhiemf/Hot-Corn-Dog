@@ -25,8 +25,8 @@ function enable() {
       y: y
     });
 
-    let dialog = new Gtk.Dialog({ title: "", modal: false});
-    dialog.show_all();
+    // let dialog = new Gtk.Dialog({ title: "", modal: false});
+    // dialog.show_all();
 
 
     corner.connect('enter-event', function () {
