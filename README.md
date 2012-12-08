@@ -14,10 +14,13 @@ was triggered wherever, and whenever you hovered over the actor. This isn't the 
 
 This test demonstrates this, so you can only see an action when hovering the blue ball in overview mode, otherwise it's "dead".
 
+`St.Bin` only works in overview mode, but the Gtk (`imports.gi.Gtk`), modules seems to be reactive in "Desktop mode".
+
+
 SETTINGS
 ------------
 
-Added a pref.js, where settings will be added. Hopefully, you will be able to select applictaions/commands, from GUI to be launched when hovering corners
+Added a pref.js, where settings will be added. Hopefully, you will be able to select applictaions/commands, from GUI to be launched when hovering corners.
 
 MORE...
 ------------
