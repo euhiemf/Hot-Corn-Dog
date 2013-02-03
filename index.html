@@ -18,14 +18,14 @@
     <!-- HEADER -->
     <div id="header_wrap" class="outer">
         <header class="inner">
-          <a id="forkme_banner" href="https://github.com/senatorn/Hot-Corn-Dog">View on GitHub</a>
+          <a id="forkme_banner" href="https://github.com/euhiemf/Hot-Corn-Dog">View on GitHub</a>
 
           <h1 id="project_title">Hot-corn-dog</h1>
           <h2 id="project_tagline">This is a GNOME Shell extension where you can pick your own &quot;hot corners&quot; for toggling the overview, or for running custom applications. You can also change the &quot;hot corner&quot; for the message tray.</h2>
 
             <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/senatorn/Hot-Corn-Dog/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/senatorn/Hot-Corn-Dog/tarball/master">Download this project as a tar.gz file</a>
+              <a class="zip_download_link" href="https://github.com/euhiemf/Hot-Corn-Dog/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/euhiemf/Hot-Corn-Dog/tarball/master">Download this project as a tar.gz file</a>
             </section>
         </header>
     </div>
@@ -47,7 +47,7 @@
 
 <p>Download the files:</p>
 
-<pre><code>git clone https://senatorn@github.com/senatorn/Hot-Corn-Dog.git
+<pre><code>git clone https://euhiemf@github.com/euhiemf/Hot-Corn-Dog.git
 </code></pre>
 
 <p>If you downloaded the zip you need to:</p>
@@ -55,14 +55,14 @@
 <pre><code>unzip Hot-Corn-Dog
 </code></pre>
 
-<p>then move all the files <strong>in the directory</strong> to either <code>~/.local/share/gnome-shell/extensions/Hot-Corn-Dog.senatorn@github.com</code> or to if you want to install for all users <code>/usr/share/gnome-shell/extensions/Hot-Corn-Dog.senatorn@github.com</code></p>
+<p>then move all the files <strong>in the directory</strong> to either <code>~/.local/share/gnome-shell/extensions/Hot-Corn-Dog.euhiemf@github.com</code> or to if you want to install for all users <code>/usr/share/gnome-shell/extensions/Hot-Corn-Dog.euhiemf@github.com</code></p>
 
 <p>So if you want to install it locally, which is the way I recommend, enter the following in a terminal:
 <pre class='highlight'><code>cd ~
-git clone https://senatorn@github.com/senatorn/Hot-Corn-Dog.git
+git clone https://euhiemf@github.com/euhiemf/Hot-Corn-Dog.git
 cd Hot-Corn-Dog
-mkdir ~/.local/share/gnome-shell/extensions/Hot-Corn-Dog.senatorn@github.com/
-cp * ~/.local/share/gnome-shell/extensions/Hot-Corn-Dog.senatorn@github.com/
+mkdir ~/.local/share/gnome-shell/extensions/Hot-Corn-Dog.euhiemf@github.com/
+cp * ~/.local/share/gnome-shell/extensions/Hot-Corn-Dog.euhiemf@github.com/
 cd ../
 rm -rf Hot-Corn-Dog
 </code></pre>
@@ -74,14 +74,14 @@ rm -rf Hot-Corn-Dog
 
 <h2>UNINSTALLATION</h2>
 <p>To uninstall you go to the directory that you installed the extension in, and then remove it. If you for example want to uninstall the extension after a local installaion, enter the following in a terminal:</p>
-<pre class='highlight'><code>rm -rf ~/.local/share/gnome-shell/extensions/Hot-Corn-Dog.senatorn@github.com/
+<pre class='highlight'><code>rm -rf ~/.local/share/gnome-shell/extensions/Hot-Corn-Dog.euhiemf@github.com/
 </code></pre>
 <p>To just disable the extension go to the <em>gnome-tweak-tool</em> and disable it.</p> 
 <h2 id="customization">CUSTOMIZATION</h2>
 
 <p>Go to the folder where you installed the files and open <em>extension.js</em>.</p>
 <p>If you installed the extension from <em>extensions.gnome.org</em> then you can enter this in a terminal:</p>
-<pre><code>gedit ~/.local/share/gnome-shell/extensions/Hot-Corn-Dog.senatorn@github.com/extension.js</code></pre>
+<pre><code>gedit ~/.local/share/gnome-shell/extensions/Hot-Corn-Dog.euhiemf@github.com/extension.js</code></pre>
 
 <p>You can edit the following values:</p>
 
@@ -118,11 +118,11 @@ rm -rf Hot-Corn-Dog
 <p>To see which GNOME version you are using, run this is a terminal:</p>
 <pre class='highlight'><code>gnome-shell --version</code></pre>
 When you know your version, open the <em>metadata.json</em> file by entering this in a terminal:
-<pre class='highlight'><code>gedit ~/.local/share/gnome-shell/extensions/Hot-Corn-Dog.senatorn@github.com/metadata.json</code></pre>
+<pre class='highlight'><code>gedit ~/.local/share/gnome-shell/extensions/Hot-Corn-Dog.euhiemf@github.com/metadata.json</code></pre>
 <p>The file should look something like this:</p>
 <pre class='highlight'><code>{
 "shell-version": ["3.4.1"],
-"uuid": "Hot-Corn-Dog.senatorn@github.com",
+"uuid": "Hot-Corn-Dog.euhiemf@github.com",
 "name": "Hot-Corn-Dog",
 "description": "Add Hot-Corners for toggling the overview... bla bla bla"
 }
@@ -131,7 +131,7 @@ When you know your version, open the <em>metadata.json</em> file by entering thi
 <pre class='highlight'><code>"shell-version": ["3.4.1", "<strong>3.5.7</strong>"],
 </code></pre>
 <p>Now save the file and reload the shell (<code>Alt + F2</code> and enter <code>r</code>).</p>
-<p>If the extension is working fine with your shell version please go to the <a href='https://github.com/senatorn/Hot-Corn-Dog/issues' target='_blank'> issues page</a> on github and write which <em>GNOME Shell</em> version you are using so that I can add it to the application by default.</p>
+<p>If the extension is working fine with your shell version please go to the <a href='https://github.com/euhiemf/Hot-Corn-Dog/issues' target='_blank'> issues page</a> on github and write which <em>GNOME Shell</em> version you are using so that I can add it to the application by default.</p>
 <p>If the extension isn't working, please do the same as above (but write that it's not compatible with your version) and I will try to fix the problem.</p>
 
 
@@ -141,7 +141,7 @@ When you know your version, open the <em>metadata.json</em> file by entering thi
     <!-- FOOTER  -->
     <div id="footer_wrap" class="outer">
       <footer class="inner">
-        <p class="copyright">Hot-corn-dog maintained by <a href="https://github.com/senatorn">senatorn</a></p>
+        <p class="copyright">Hot-corn-dog maintained by <a href="https://github.com/euhiemf">euhiemf</a></p>
         <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
       </footer>
     </div>
