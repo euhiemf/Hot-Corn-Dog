@@ -29,13 +29,13 @@ INSTRUCTIONS
 
 To disable the extension enter this in a terminal, or use the gnome-tweak-tool
 
-    gnome-shell-extension-tool -d "36Hot-Corn-Dog.senatorn@github.com"
+    gnome-shell-extension-tool -d "36Hot-Corn-Dog.euhiemf@github.com"
 
 to enable, change the `-d` to `-e`.
 
 To install enter
 
-    git clone -b testing https://github.com/senatorn/Hot-Corn-Dog.git ~/.local/share/gnome-shell/extensions/36Hot-Corn-Dog.senatorn@github.com
+    git clone -b testing https://github.com/euhiemf/Hot-Corn-Dog.git ~/.local/share/gnome-shell/extensions/36Hot-Corn-Dog.euhiemf@github.com
 
 After installing, restart the gnome shell and enable the extension.
 MORE...
