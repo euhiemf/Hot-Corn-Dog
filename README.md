@@ -1,6 +1,11 @@
 Hot-Corn-Dog
 ============
 
+___This repository is deprecated due to changes in the Gnome shell API since 2013___
+
+ 
+
+
 This is a GNOME Shell extension where you can pick your own "hot corners" for toggling the overview, or for running custom applications. You can also change the "hot corner" for the message tray.
 
 INSTALLATION
